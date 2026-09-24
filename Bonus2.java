@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Bonus2 {
+    public static void main(String[] args) {
+        Scanner read = new Scanner(System.in);
+
+        System.out.println("Tempo de Empresa: ");
+        int tmp = read.nextInt();
+
+        System.out.println("Nota da Avaliação: ");
+        float nota = read.nextFloat();
+
+        System.out.println("Valor do Salário: ");
+        double vlrS = read.nextDouble();
+
+        double vlrT = tmp * vlrS;
+
+        if (tmp >= 5 && (nota >= 8));{
+            System.out.printf("Bônus de 3 Salários: R$%.2f/n", vlrT);
+        }else if (tmp < 5 && (nota >= 8)); {
+            System.out.printf("Bônus de 2 Salários: R$%.2f/n", vlrT);
+        }else if (nota > 6 && nota < 8); {
+            System.out.printf("Bônus de 1 Salário: R$%.2f/n", vlrT);
+        }else if (nota < 6); {
+            System.out.printf("Sem Bônus");
+        }
+    }
+}
